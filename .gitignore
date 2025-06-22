@@ -1,0 +1,11 @@
+key.txt
+
+main
+decode
+
+*.o
+
+# moje pliki do testowania
+małypliczek
+małypliczek.dec
+małypliczek.enc

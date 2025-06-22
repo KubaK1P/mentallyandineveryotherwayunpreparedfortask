@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <stdint.h>
 
-#define KEY_SIZE 513
+#define KEY_SIZE 512
 #define CHUNK_SIZE 2048
 #define NOVATION 1
 

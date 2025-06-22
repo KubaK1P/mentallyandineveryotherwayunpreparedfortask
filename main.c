@@ -3,7 +3,7 @@
 #include <stdint.h>
 #include <time.h>
 
-#define KEY_SIZE 513
+#define KEY_SIZE 512
 #define CHUNK_SIZE 2048
 #define ARTURIA 0
 
@@ -28,8 +28,8 @@ char *base64_encode(const unsigned char *data, size_t input_length, size_t *outp
 
         encoded_data[j++] = encoding_table[(triple >> 18) & 0x3F];
         encoded_data[j++] = encoding_table[(triple >> 12) & 0x3F];
-        encoded_data[j++] = (i > input_length + 1) ? padding_char : encoding_table[(triple >> 6) & 0x3F];
-        encoded_data[j++] = (i > input_length) ? padding_char : encoding_table[triple & 0x3F];
+        encoded_data[j++] = (i >= input_length + 1) ? padding_char : encoding_table[(triple >> 6) & 0x3F];
+        encoded_data[j++] = (i >= input_length) ? padding_char : encoding_table[triple & 0x3F];
     }
 
     encoded_data[j] = '\0';
